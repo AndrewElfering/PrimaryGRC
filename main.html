@@ -45,7 +45,7 @@
             height: 20px;
             border-radius: 0%;
             margin-left: -10px;
-            border: 3px solid rgb(185, 185, 185); 
+            border: 3px solid rgb(161, 161, 161); 
         }
         .yellow-circle {
             background-color: yellow;
@@ -56,6 +56,22 @@
         .blue-circle {
             background-color: blue;
         }
+
+        .w3-bar-item {
+            float: left;
+            padding: 8px 16px;
+            color: rgb(0, 0, 0);
+            background-color: rgb(161, 161, 161);
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold; /* Make font bold */
+            border: 2px solid white; /* Thicker border */
+        }
+        .w3-bar-item:hover {
+            background-color: #ffffff;
+            color: rgb(10, 10, 10);
+        }
+
     </style>
 </head>
 <body>
@@ -70,7 +86,6 @@
         </p>
     </header>
     <div class="container">
-        <h2>About Us</h2>
         <p>
             Primary Cybersecurity Solutions is a blog committed to providing the most up-to-date documentation and resources for the cybersecurity readiness of any organization, with a specialized focus on Governance, Risk, and Compliance. 
         </p>
@@ -81,6 +96,7 @@
         <div class="w3-bar w3-black">
             <button class="w3-bar-item w3-button" onclick="scrollToSection('WhatisGRC')">What is GRC?</button>
             <button class="w3-bar-item w3-button" onclick="scrollToSection('IndustrySpecific')">Industry Specific Regulations</button>
+            <button class="w3-bar-item w3-button" onclick="scrollToSection('Documentation')">Documentation</button>
         </div>
     </div> 
 
@@ -94,6 +110,13 @@
 
     <div class="container">
         <h2 id="IndustrySpecific">Industry Specific Regulations</h2>
+        <p>
+            Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
+        </p>
+    </div> 
+
+    <div class="container">
+        <h2 id="Documentation">Documentation</h2>
         <p>
             Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
         </p>
