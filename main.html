@@ -79,13 +79,13 @@
     <div class="container">
         <h2>Articles</h2>
         <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button" onclick="openCity('WhatisGRC')">What is GRC?</button>
-            <button class="w3-bar-item w3-button" onclick="openCity('IndustrySpecific')">Industry Specific Regulations</button>
-          </div>
+            <button class="w3-bar-item w3-button" onclick="scrollToSection('WhatisGRC')">What is GRC?</button>
+            <button class="w3-bar-item w3-button" onclick="scrollToSection('IndustrySpecific')">Industry Specific Regulations</button>
+        </div>
     </div> 
 
     <div class="container">
-        <h2>What is GRC?</h2>
+        <h2 id="WhatisGRC">What is GRC?</h2>
         <p>
             Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
         </p>
@@ -93,12 +93,18 @@
     </div>   
 
     <div class="container">
-        <h2>Industry Specific Regulations</h2>
+        <h2 id="IndustrySpecific">Industry Specific Regulations</h2>
         <p>
             Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
         </p>
-    
     </div> 
+
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 
     <footer>
         <p>&copy; 2024 Primary Cybersecurity. All rights reserved.</p>
