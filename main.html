@@ -12,7 +12,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background: white;
+            background:#f4f4f4;
             color: black;
             padding: 10px 0;
             text-align: center;
@@ -61,15 +61,43 @@
             float: left;
             padding: 8px 16px;
             color: black;
-            background-color: gray;
+            background-color: white;
             text-align: center;
             cursor: pointer;
             font-weight: bold; /* Make font bold */
-            border: 2px solid white; /* Thicker border */
+            border: 2px solid black; /* Thicker border */
         }
-        .w3-bar-item:hover {
+        /*.w3-bar-item:hover {
             background-color: white;
             color: black;
+        }*/
+
+        .tabs {
+            display: flex;
+            cursor: pointer;
+        }
+        .tab {
+            padding: 10px 20px;
+            background-color: gray;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        .tab-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 0 5px 5px 5px;
+            border-top: none;
+            background-color: white;
+        }
+        .tab.active {
+            background-color: white;
+            border-bottom: none;
+        }
+        .tab-content.active {
+            display: block;
         }
 
     </style>
@@ -82,21 +110,33 @@
             <span class="circle blue-circle"></span>
         </h1>
     </header>
-    <div class="container">
-        <h2>Our Mission</h2>
-        <p>
-            Primary Cybersecurity is committed to providing the most up-to-date documentation and resources for the cybersecurity readiness of any organization, with a specialized focus on Governance, Risk, and Compliance. 
-        </p>
-    </div>   
 
     <div class="container">
-        <h2>Articles</h2>
-        <div class="w3-bar w3-black">
-            <button class="w3-bar-item w3-button" onclick="scrollToSection('WhatisGRC')">What is GRC?</button>
-            <button class="w3-bar-item w3-button" onclick="scrollToSection('IndustrySpecific')">Industry Specific Regulations</button>
-            <button class="w3-bar-item w3-button" onclick="scrollToSection('Documentation')">Documentation</button>
+        <div class="tabs">
+            <div class="tab active" onclick="openTab(event, 'Articles')">Articles</div>
+            <div class="tab" onclick="openTab(event, 'Mission')">Our Mission</div>
+            <div class="tab" onclick="openTab(event, 'Author')">About the Author</div>
         </div>
-    </div> 
+    
+        <div id="Articles" class="tab-content active">
+            <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button" onclick="scrollToSection('WhatisGRC')">What is GRC?</button>
+                <button class="w3-bar-item w3-button" onclick="scrollToSection('IndustrySpecific')">Industry Specific Regulations</button>
+                <button class="w3-bar-item w3-button" onclick="scrollToSection('Documentation')">Documentation</button>
+            </div>
+        </div>
+        <div id="Mission" class="tab-content">
+            <p>
+                Our mission is to provide exceptional resources and insights in the field of cybersecurity, ensuring that individuals and organizations are well-informed and prepared to face the evolving digital landscape.
+            </p>
+        </div>
+        <div id="Author" class="tab-content">
+            <p>
+                The author is a seasoned cybersecurity professional with years of experience in the industry, dedicated to educating and empowering others through comprehensive and accessible content.
+            </p>
+        </div>
+    </div>
+
 
     <div class="container">
         <h2 id="WhatisGRC">What is GRC?</h2>
@@ -124,6 +164,20 @@
         function scrollToSection(sectionId) {
             var section = document.getElementById(sectionId);
             section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
     </script>
 
