@@ -41,8 +41,8 @@
         }
         .circle {
             display: inline-block;
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             border-radius: 100%;
             margin-left: -10px;
             border: 2px solid gray; 
@@ -60,19 +60,18 @@
         .w3-bar-item {
             float: left;
             padding: 5px 10px;
-            color: gray;
+            color: black;
             background-color: #ccc;
             text-align: center;
             cursor: pointer;
             /*font-weight: bold; Make font bold */
-            border: 1px solid white; /* Thicker border */
+            border: 2px solid #ccc; /* Thicker border */
             border-radius: 5px 5px 5px 5px;
             margin-right: 3px;
             /*margin-left: -10px;*/
         }
         .w3-bar-item:hover {
-            background-color: #ccc;
-            color: black;
+            background-color: white;
             /*border: 2px solid #ccc;*/
         }
 
@@ -83,7 +82,7 @@
         .tab {
             padding: 5px 15px;
             background-color: #ccc;
-            color: gray;
+            color: black;
             /*font-weight: bold;*/
             border: 2px solid #ccc;
             border-radius: 5px 5px 0 0;
@@ -91,7 +90,7 @@
         }
 
         .tab:hover {
-            color: black;
+            background-color: white;
         }
 
         .tab-content {
@@ -115,7 +114,7 @@
 </head>
 <body>
     <header>
-        <h1>Primary Cybersecurity &nbsp;
+        <h1>Primary Cybersecurity&nbsp;
             <span class="circle yellow-circle"></span>
             <span class="circle red-circle"></span>
             <span class="circle blue-circle"></span>
@@ -126,9 +125,15 @@
     <div class="container">
         <div class="tabs">
             <div class="tab active" onclick="openTab(event, 'Articles')">Articles</div>
-            <div class="tab" onclick="openTab(event, 'Mission')">About</div>
+            <div class="tab" onclick="openTab(event, 'Mission')">About Us</div>
         </div>
     
+        <div id="Mission" class="tab-content">
+            <p>
+                Primary Cybersecurity is a blog dedicated to providing readers with the most up-to-date resources and documentation for the cybersecurity readiness of any organization, with a specialized focus on Governance, Risk, and Compliance.
+            </p>
+        </div>
+
         <div id="Articles" class="tab-content active">
             <p>
             <div class="w3-bar w3-black">
@@ -138,37 +143,29 @@
             </div>
             </p>
             <p>&nbsp;</p>
-        </div>
-        <div id="Mission" class="tab-content">
+            <p>&nbsp;</p>
+
+
+            <h2 id="WhatisGRC">What is GRC?</h2>
             <p>
-                Primary Cybersecurity is a blog dedicated to providing readers with the most up-to-date resources and documentation for the cybersecurity readiness of any organization, with a specialized focus on Governance, Risk, and Compliance.
+                Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
+            </p>
+
+
+            <h2 id="IndustrySpecific">Industry Specific Regulations</h2>
+            <p>
+            Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance. 
+            </p>
+
+
+            <h2 id="Documentation">Documentation</h2>
+            <p>
+                Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
             </p>
         </div>
+
         </div>
     </div>
-
-
-    <div class="container">
-        <h2 id="WhatisGRC">What is GRC?</h2>
-        <p>
-            Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
-        </p>
-    
-    </div>   
-
-    <div class="container">
-        <h2 id="IndustrySpecific">Industry Specific Regulations</h2>
-        <p>
-            Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
-        </p>
-    </div> 
-
-    <div class="container">
-        <h2 id="Documentation">Documentation</h2>
-        <p>
-            Primary Cybersecurity is an organization committed providing up-to-date documentation and resources for all things cybersecurity, with a primary focus on Governance, Risk, and Compliance.
-        </p>
-    </div> 
 
     <script>
         function scrollToSection(sectionId) {
